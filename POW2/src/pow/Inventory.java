@@ -1,3 +1,4 @@
+//comment
 package pow;
 
 import java.util.Scanner;
