@@ -1,9 +1,4 @@
-//commenet
 package pow;
-
-//Copyright Temporary-Games
-//BUILT BY GEORGE
-
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
