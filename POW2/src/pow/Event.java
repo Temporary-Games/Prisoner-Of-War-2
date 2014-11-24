@@ -1,5 +1,7 @@
-//comment
 package pow;
+
+//Copyright Temporary-Games
+//BUILT BY GEORGE
 
 import java.io.File;
 import java.io.FileNotFoundException;
