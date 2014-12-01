@@ -1,4 +1,3 @@
-//Coooooooomemememememnt
 //Stuff and things
 package pow;
 //Coomement
