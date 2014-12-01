@@ -1,6 +1,7 @@
 //Stuff and thingsadick
 package pow;
 //Coomement
+//more comments
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
