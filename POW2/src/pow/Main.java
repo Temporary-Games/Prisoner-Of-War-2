@@ -1,5 +1,4 @@
-//Coooment
-//Stuff and things
+//Stuff and thingsadick
 package pow;
 //Coomement
 
