@@ -42,4 +42,13 @@ public class Inventory {
 		}
 		scan.close();
 	}
+	
+	public String readItem(int item)
+	{
+		Scanner scan = new Scanner("data/events.txt");
+		do{
+			if(scan.nextInt() == item)
+				return scan.next()
+		}while(scan.hasNext());
+	}
 }
