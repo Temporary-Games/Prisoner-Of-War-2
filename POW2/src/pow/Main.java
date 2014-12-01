@@ -2,6 +2,8 @@
 package pow;
 //Coomement
 
+//things snd stuff
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
