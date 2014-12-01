@@ -1,4 +1,3 @@
-//comment
 package pow;
 //Coomement
 
