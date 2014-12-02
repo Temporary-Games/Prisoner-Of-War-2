@@ -1,8 +1,4 @@
-//Stuff and thingsadick
 package pow;
-//Coomement
-//Floop A Doop
-//things and stuff
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
