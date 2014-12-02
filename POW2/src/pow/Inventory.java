@@ -45,10 +45,13 @@ public class Inventory {
 	
 	public String readItem(int item)
 	{
+		String output = "";
 		Scanner scan = new Scanner("data/events.txt");
 		do{
 			if(scan.nextInt() == item)
-				return scan.next()
+				output = scan.next().replace('_', ' ');
 		}while(scan.hasNext());
+		scan.close();
+		return output;
 	}
 }
