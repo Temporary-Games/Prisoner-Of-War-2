@@ -50,6 +50,7 @@ public class Inventory {
 		do {
 			if (scan.nextInt() == item)
 				output = scan.next().replace('_', ' ');
+			scan.nextLine();
 		} while (scan.hasNext());
 		scan.close();
 		System.out.println(output);
@@ -59,12 +60,16 @@ public class Inventory {
 	public String toString() {
 		String output = "";
 		for (int x = 0; x < inventory.length; x++) {
+			if (inventory[x] == 0) 
+				output += "-EMPTY- ";
+			//System.out.println("TEST");
 			Scanner scan = new Scanner("data/events.txt");
 			do {
-				if (inventory[x] == 0) {
-					output += "-EMPTY- ";
-				} else if (scan.nextInt() == inventory[x])
+				//System.out.println("TEST 2");
+				if (scan.nextInt()==inventory[x])
+					//System.out.println("TEST 3");
 					output += scan.next().replace('_', ' ') + " ";
+				scan.nextLine();
 			} while (scan.hasNext());
 
 			scan.close();

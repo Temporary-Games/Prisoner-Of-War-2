@@ -35,7 +35,7 @@ public class Main {
 					System.out.println("A prisoner was killed by the guards.");
 				}
 				
-				
+				System.out.println("Inventory :: " + playerInv.toString());
 				
 				
 				System.out.println("Do you want to go to the next turn?(y/n)");
