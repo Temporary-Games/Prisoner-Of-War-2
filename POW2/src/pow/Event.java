@@ -55,25 +55,26 @@ public class Event {
 		for(int i = 0; i< x; i++){
 			event.nextLine();
 		}
-		int inventoryPos = event.nextInt();
-		if(inventoryPos!=0)
-			System.out.print("Name: You found a ");
-		else
-			System.out.print("Name: ");
+		inventoryPosition = event.nextInt();
+		title = event.next().replace('_', ' ');
+		//if(inventoryPosition!=0)
+			//System.out.print("Name: You found a ");
+		//else
+			//System.out.print("Name: ");
 		
-		System.out.println(event.next().replace('_', ' ')); 
-		System.out.println("Guard Aggression: " + event.nextInt()); 
+		//System.out.println(title); 
+		guardAggression = event.nextInt();
+		//System.out.println("Guard Aggression: " + guardAggression); 
 		bribe = event.nextBoolean();
-		System.out.println("Bribe: " + bribe); 
+		//System.out.println("Bribe: " + bribe); 
 		
 		bribeable = event.nextBoolean();
-		System.out.println("Bribeable: " + bribeable); 
+		//System.out.println("Bribeable: " + bribeable); 
 		
 		boolean freesAPrisoner = event.nextBoolean();
-		System.out.println("Does it Free A Prisoner: " + freesAPrisoner); 
+		//System.out.println("Does it Free A Prisoner: " + freesAPrisoner); 
 		
-		//int inventoryPos = event.nextInt();
-		System.out.println("Inventory Number: " + inventoryPos);
+		//System.out.println("Inventory Number: " + inventoryPosition);
 		
 		
 	}
