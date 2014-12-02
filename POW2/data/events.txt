@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 1 Chocolate_Bar 0 true false false
 2 Cigar_Box 6 true false true
 0 Guard_Pummels_You -2 false false false
 0 Aggressive_Guard 2 false false true 
+=======
+
+1 Chocolate_Bar 0 true false false
+2 Cigar_Box 6 true false true
+0 Guard_Pummels_You -2 false false false
+>>>>>>> refs/remotes/origin/master
