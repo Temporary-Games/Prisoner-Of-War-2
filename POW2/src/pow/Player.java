@@ -1,4 +1,3 @@
-//comment
 package pow;
 
 public class Player {

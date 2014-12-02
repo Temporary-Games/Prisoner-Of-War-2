@@ -1,4 +1,3 @@
-//commenet
 package pow;
 
 import java.io.FileNotFoundException;
@@ -31,7 +30,7 @@ public class Main {
 					guardAgro = 0;
 				System.out.println("Guard Agression: " + guardAgro);
 				if (guardAgro >= 10) {
-					guardAgro -= 10;
+					guardAgro = 0;
 					savedPrisoners--;
 					System.out.println("A prisoner was killed by the guards.");
 				}
