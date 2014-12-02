@@ -31,20 +31,7 @@ public class Event {
 	 * which would be "bribable")
 	 * 
 	 */
-	boolean bribe;
-	
-	/*
-	 * If this is true the card can be used to free a prisoner when
-	 * provided with a "bribe" card.  See "bribe" comment for description
-	 * 
-	 */
-	boolean bribeable;
-	
-	/*
-	 * If not 0, if it has a non-zero number, it will equal to a certain value
-	 * of the inventory class array
-	 * 
-	 */
+
 	int inventoryPosition = 0;
 	
 	public Event() throws FileNotFoundException {
@@ -55,26 +42,16 @@ public class Event {
 		for(int i = 0; i< x; i++){
 			event.nextLine();
 		}
+		
 		inventoryPosition = event.nextInt();
+		
 		title = event.next().replace('_', ' ');
-		//if(inventoryPosition!=0)
-			//System.out.print("Name: You found a ");
-		//else
-			//System.out.print("Name: ");
-		
-		//System.out.println(title); 
+
 		guardAggression = event.nextInt();
-		//System.out.println("Guard Aggression: " + guardAggression); 
-		bribe = event.nextBoolean();
-		//System.out.println("Bribe: " + bribe); 
-		
-		bribeable = event.nextBoolean();
-		//System.out.println("Bribeable: " + bribeable); 
+
 		
 		boolean freesAPrisoner = event.nextBoolean();
-		//System.out.println("Does it Free A Prisoner: " + freesAPrisoner); 
-		
-		//System.out.println("Inventory Number: " + inventoryPosition);
+
 		
 		
 	}
@@ -84,12 +61,6 @@ public class Event {
 	}
 	public int getGuardAggression(){
 		return guardAggression;
-	}
-	public boolean getBribe(){
-		return bribe;
-	}
-	public boolean getBribeable(){
-		return bribeable;
 	}
 	public boolean getFreesAPrisoner(){
 		return freesAPrisoner;
