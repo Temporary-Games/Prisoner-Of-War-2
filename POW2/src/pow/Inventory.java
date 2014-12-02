@@ -31,6 +31,7 @@ public class Inventory {
 		Scanner scan = new Scanner(System.in);
 		for (int x = 0; x < 4; x++) {
 			if (inventory[x] == item) {
+				this.readItem(item);
 				System.out.println("Do you want to use this item? (y/n)");
 				String answer = scan.next();
 				if (answer.equals("y")) {
@@ -41,16 +42,33 @@ public class Inventory {
 		}
 		scan.close();
 	}
-	
-	public String readItem(int item)
-	{
+
+	// reads an int and displays the corresponding item as a string
+	public void readItem(int item) {
 		String output = "";
 		Scanner scan = new Scanner("data/events.txt");
-		do{
-			if(scan.nextInt() == item)
+		do {
+			if (scan.nextInt() == item)
 				output = scan.next().replace('_', ' ');
-		}while(scan.hasNext());
+		} while (scan.hasNext());
 		scan.close();
+		System.out.println(output);
+	}
+
+	// prints the inventory
+	public String toString() {
+		String output = "";
+		for (int x = 0; x < inventory.length; x++) {
+			Scanner scan = new Scanner("data/events.txt");
+			do {
+				if (inventory[x] == 0) {
+					output += "-EMPTY- ";
+				} else if (scan.nextInt() == inventory[x])
+					output += scan.next().replace('_', ' ') + " ";
+			} while (scan.hasNext());
+
+			scan.close();
+		}
 		return output;
 	}
 }
