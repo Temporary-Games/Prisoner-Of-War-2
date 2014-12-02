@@ -1,8 +1,5 @@
 package pow;
 
-//Copyright Temporary-Games
-//BUILT BY GEORGE
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -59,24 +56,24 @@ public class Event {
 			event.nextLine();
 		}
 		int inventoryPos = event.nextInt();
-		//if(inventoryPos!=0)
-			//System.out.print("Name: You found a ");
-		//else
-			//System.out.print("Name: ");
+		if(inventoryPos!=0)
+			System.out.print("Name: You found a ");
+		else
+			System.out.print("Name: ");
 		
-		title = (event.next().replace('_', ' ')); 
-		guardAggression = event.nextInt(); 
+		System.out.println(event.next().replace('_', ' ')); 
+		System.out.println("Guard Aggression: " + event.nextInt()); 
 		bribe = event.nextBoolean();
-		//System.out.println("Bribe: " + bribe); 
+		System.out.println("Bribe: " + bribe); 
 		
 		bribeable = event.nextBoolean();
-		//System.out.println("Bribeable: " + bribeable); 
+		System.out.println("Bribeable: " + bribeable); 
 		
 		boolean freesAPrisoner = event.nextBoolean();
-		//System.out.println("Does it Free A Prisoner: " + freesAPrisoner); 
+		System.out.println("Does it Free A Prisoner: " + freesAPrisoner); 
 		
 		//int inventoryPos = event.nextInt();
-		//System.out.println("Inventory Number: " + inventoryPos);
+		System.out.println("Inventory Number: " + inventoryPos);
 		
 		
 	}
@@ -101,3 +98,6 @@ public class Event {
 	}
 	
 }
+
+
+
