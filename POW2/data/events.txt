@@ -3,4 +3,4 @@
 0 Guard_pummels_you. -2 false
 0 Aggressive_guard_is_angry_with_you. 2 false
 0 Riot. 8 true
-0 Oskar_Schindler_come_to_visit -4 true
+0 Oskar_Schindler_come_to_visit. -4 true
