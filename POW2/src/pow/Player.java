@@ -17,7 +17,7 @@ public class Player {
 	 * Create a new playerInv array. playerInv is the inventory of the player.
 	 * The Inventory is 5 items that are stored in an inventory array.
 	 */
-	Inventory playerInv = new Inventory(0, 0, 0, 0, 0);
+	Inventory playerInv = new Inventory();
 	
 	public int getInventory(int i){
 		return playerInv.inventory[i];
