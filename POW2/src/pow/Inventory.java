@@ -59,16 +59,17 @@ public class Inventory {
 	}
 
 	// reads an int and displays the corresponding item as a string
-	public void readItem(int item) {
+	public String readItem(int item) {
 		String output = "";
 		Scanner scan = new Scanner("data/events.txt");
 		do {
-			if (scan.nextInt() == item)
+			int fladoodle = scan.nextInt();
+			if (fladoodle == item)
 				output = scan.next().replace('_', ' ');
 			scan.nextLine();
 		} while (scan.hasNext());
-		System.out.println(output);
-		scan.close();
+		//System.out.println(output);
+		return output;
 	}
 
 	// prints the inventory
@@ -84,16 +85,19 @@ public class Inventory {
 
 				if (scan.hasNextInt()) {
 					check = scan.nextInt();
-					System.out.println("IN:" + check);
+					if(check == inventory[x]){
+						output+=readItem(check);
+					}
+					//System.out.println("IN:" + check);
 				}
 				if (check != -1)
 					scan.nextLine();
-				System.out
-						.println("CONFIRMATION_CONTROL_STATION_ALPHA_PROTOCOL_6");
+				//System.out
+						//.println("CONFIRMATION_CONTROL_STATION_ALPHA_PROTOCOL_6");
 
 			} while (check != -1);
 		}
-		System.out.println("Output");
+		//System.out.println("Output");
 		return output;
 	}
 }
