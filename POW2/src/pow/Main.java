@@ -7,6 +7,9 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		// rounds of the game
 		int rounds = 30;
+		
+		//Used and essential
+		String check;
 
 		// The players inventory
 		Inventory playerInv = new Inventory(0, 0, 0, 0, 0);
@@ -73,20 +76,28 @@ public class Main {
 				}
 
 				// Else, Do you want to go to the next turn?
-				else
+				else{
 					System.out
 							.println("Do you want to go to the next turn?(y/n)");
 
-			} while (!(scan.nextLine().equalsIgnoreCase("y")));
-			scan.close();
+				}
+				check = scan.next();
+			} while (!(check.equalsIgnoreCase("y")));
+			//scan.close();
 		}
 		System.out.println(" ---------------------");
 		System.out.println("    - Game Over -     ");
 		System.out.println(" ---------------------");
 		System.out
-				.println("| Freed Prisoners: " + Event.savedPrisoners + "  |");
-		System.out.println("| Prisoners Killed: " + Event.killedPrisoners
-				+ " |");
+				.println("|  Freed Prisoners: " + Event.savedPrisoners + " |");
+		System.out.println("|  Dead Prisoners: " + Event.killedPrisoners
+				+ "  |");
+		System.out.println(" ---------------------");
+		if(Event.savedPrisoners>Event.killedPrisoners){
+			System.out.println("|      You Win!       |");
+		}else{
+			System.out.println("|      You Lose!      |");
+		}
 		System.out.println(" ---------------------");
 	}
 }
