@@ -89,6 +89,7 @@ public class Inventory {
 						String ip = scan.next().replace('_', ' ');
 						ip = ip.substring(11, ip.length()-1);
 						output+=("-"+ip+"- ");
+						
 					}
 					//System.out.println("IN:" + check);
 				}
