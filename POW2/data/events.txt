@@ -1,5 +1,5 @@
-1 You_find_a_chocolate_bar. 0 false
-2 You_find_a_cigar_box. 6 false
+1 You_find_a_Chocolate_Bar. 0 false
+2 You_find_a_Cigar_Box. 6 false
 0 Guard_pummels_you. -2 false
 0 Aggressive_guard_is_angry_with_you. 2 false
 0 Riot. 8 true

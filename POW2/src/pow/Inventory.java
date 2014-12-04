@@ -82,11 +82,13 @@ public class Inventory {
 				output += "-EMPTY- ";
 
 			do {
-
+				
 				if (scan.hasNextInt()) {
 					check = scan.nextInt();
 					if(check == inventory[x]){
-						output+=readItem(check);
+						String ip = scan.next().replace('_', ' ');
+						ip = ip.substring(11, ip.length()-1);
+						output+=("-"+ip+"- ");
 					}
 					//System.out.println("IN:" + check);
 				}
