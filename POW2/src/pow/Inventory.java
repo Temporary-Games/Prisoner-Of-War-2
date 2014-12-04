@@ -18,8 +18,8 @@ public class Inventory {
 	// inventory constructor
 	public Inventory(int a1, int a2, int a3, int a4, int a5)
 			throws FileNotFoundException {
-		
-		//set all the inventory slots empty
+
+		// set all the inventory slots empty
 		inventory[0] = 0;
 		inventory[1] = 0;
 		inventory[2] = 0;
@@ -68,6 +68,7 @@ public class Inventory {
 			scan.nextLine();
 		} while (scan.hasNext());
 		System.out.println(output);
+		scan.close();
 	}
 
 	// prints the inventory

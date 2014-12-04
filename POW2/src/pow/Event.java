@@ -51,6 +51,7 @@ public class Event {
 
 		freesAPrisoner = event.nextBoolean();
 
+		event.close();
 	}
 
 	public String getTitle() {

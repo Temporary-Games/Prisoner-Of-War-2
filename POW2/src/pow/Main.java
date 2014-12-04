@@ -78,7 +78,7 @@ public class Main {
 							.println("Do you want to go to the next turn?(y/n)");
 
 			} while (!(scan.nextLine().equalsIgnoreCase("y")));
-
+			scan.close();
 		}
 		System.out.println(" ---------------------");
 		System.out.println("    - Game Over -     ");
