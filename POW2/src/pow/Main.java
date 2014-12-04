@@ -23,7 +23,7 @@ public class Main {
 			// recieves user input
 			Scanner scan = new Scanner(System.in);
 			do {
-
+				
 				// Prints out the Round Box and the Number of Freed/Killed
 				// prisoners.
 				System.out.println(" ---------------------");
@@ -65,7 +65,7 @@ public class Main {
 				// Kill or Save Prisoners
 				stuff.killSavePrisoners();
 
-				// System.out.println("Inventory :: " + playerInv.toString());
+				System.out.println("Inventory :: " + playerInv.toString());
 
 				// If there are no more prisoners left, end the game.
 				if (Event.prisoners <= 0
