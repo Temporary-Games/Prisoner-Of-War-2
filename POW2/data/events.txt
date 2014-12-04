@@ -4,5 +4,5 @@
 0 Aggressive_guard_is_angry_with_you. 2 false
 0 Riot. 8 true
 0 Oskar_Schindler_come_to_visit. -4 true
-0 Adolf_Hitler_visits_the_camp. 10000 false
+0 Adolf_Hitler_visits_the_camp. 40 false
 -1

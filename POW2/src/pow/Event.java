@@ -21,18 +21,24 @@ public class Event {
 	 */
 	boolean freesAPrisoner;
 
-	/*
-	 * Number of Prisoners
-	 */
-	public int prisoners = 100;
-
+	// Inventory Position of an item (This instance variable is useless until
+	// set, in the Event constructor
 	int inventoryPosition = 0;
+
+	// Number of Prisoners
+	public static final int prisoners = 10;
+
+	// Number of prisoners killed
+	public static int killedPrisoners;
+
+	// Number of saved prisoners.
+	public static int savedPrisoners;
 
 	public Event() throws FileNotFoundException {
 		// event reads in an event from "events.txt"
 		Scanner event = new Scanner(new File("data/events.txt"));
 		// Test call of the event.txt file
-		int x = (int) (Math.random() * 3);
+		int x = (int) (Math.random() * 7);
 		for (int i = 0; i < x; i++) {
 			event.nextLine();
 		}
@@ -43,7 +49,7 @@ public class Event {
 
 		guardAggression += event.nextInt();
 
-		boolean freesAPrisoner = event.nextBoolean();
+		freesAPrisoner = event.nextBoolean();
 
 	}
 
@@ -58,42 +64,38 @@ public class Event {
 	public int getInventoryPosition() {
 		return inventoryPosition;
 	}
-	
-	public int getGuardAggression(){
+
+	public int getGuardAggression() {
 		return guardAggression;
 	}
 
-	
-	//unfinished method!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	public void killSavePrisoners() {
 		System.out.println("Guard Aggression: " + guardAggression);
 		int save = 0;
 		int kill = 0;
 		// Kill Prisoners
 		if (guardAggression >= 10) {
-			int count = 0;
-			for (guardAggression -= 10; guardAggression == 0; guardAggression -= 10) {
-				prisoners -= 1;
+			for (int x = guardAggression; x >= 10; x -= 10) {
+				killedPrisoners++;
 				kill++;
 			}
+			System.out.println(kill + " prisoner(s) were killed.");
+			guardAggression = 0;
 		}
 
 		// Save Prisoners
-		if (guardAggression <= -10) {
-			int count = 0;
-			for (guardAggression += 10; guardAggression == 0; guardAggression += 10) {
-				prisoners += 1;
+		else if (guardAggression <= -10) {
+			for (int y = guardAggression; y < -10; y += 10) {
+				savedPrisoners++;
 				save++;
 			}
+			System.out.println(save + " prisoner(s) were freed.");
+			guardAggression = 0;
 		}
-		
-		System.out.println(save + " prisoners were saved.");
-		System.out.println(kill + " prisoners were killed.");
-		
-	}
 
-	public int getNumPrisoners() {
-		return prisoners;
+		// If not above 10 or below 10
+		else {
+		}
 	}
 
 }

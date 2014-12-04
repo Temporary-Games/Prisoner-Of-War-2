@@ -5,24 +5,29 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Inventory {
-	// inventory instantiation
+	// inventory array instantiation
 	public int[] inventory = new int[5];
+
+	// declare scanner
 	Scanner scan;
+
 	public Inventory() {
-		
+
 	}
+
 	// inventory constructor
-	public Inventory(int a1, int a2, int a3, int a4, int a5) throws FileNotFoundException{
+	public Inventory(int a1, int a2, int a3, int a4, int a5)
+			throws FileNotFoundException {
+		
+		//set all the inventory slots empty
 		inventory[0] = 0;
 		inventory[1] = 0;
 		inventory[2] = 0;
 		inventory[3] = 0;
 		inventory[4] = 0;
+
+		// read in the file of events
 		scan = new Scanner(new File("data/events.txt"));
-	}
-	
-	private finalize(){
-		
 	}
 
 	// adds item to empty space
@@ -66,25 +71,26 @@ public class Inventory {
 	}
 
 	// prints the inventory
-	public String toString(){
+	public String toString() {
 		String output = "";
 		int check = 0;
 		inventory[0] = 1;
 		for (int x = 0; x < inventory.length; x++) {
-			if (inventory[x] == 0) 
+			if (inventory[x] == 0)
 				output += "-EMPTY- ";
-			
-			do {	
 
-				if(scan.hasNextInt()){
+			do {
+
+				if (scan.hasNextInt()) {
 					check = scan.nextInt();
-				System.out.println("IN:" + check);
+					System.out.println("IN:" + check);
 				}
-				if(check!=-1)
+				if (check != -1)
 					scan.nextLine();
-				System.out.println("CONFIRMATION_CONTROL_STATION_ALPHA_PROTOCOL_6");
-				
-			} while (check!=-1);
+				System.out
+						.println("CONFIRMATION_CONTROL_STATION_ALPHA_PROTOCOL_6");
+
+			} while (check != -1);
 		}
 		System.out.println("Output");
 		return output;
