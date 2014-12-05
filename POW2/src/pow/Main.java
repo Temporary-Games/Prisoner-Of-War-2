@@ -12,7 +12,11 @@ public class Main {
 		String check;
 
 		// The players inventory
+		@SuppressWarnings("unused")
 		Inventory playerInv = new Inventory(0, 0, 0, 0, 0);
+		
+		// recieves user input
+		Scanner scan = new Scanner(System.in);
 
 		// Core of the game. Makes new rounds.
 		for (int currentRound = 1; currentRound <= rounds; currentRound++) {
@@ -20,8 +24,6 @@ public class Main {
 			// create a new event card for this round
 			Event stuff = new Event();
 
-			// recieves user input
-			Scanner scan = new Scanner(System.in);
 			do {
 
 				// Prints out the Round Box and the Number of Freed/Killed
@@ -84,7 +86,6 @@ public class Main {
 				}
 				check = scan.next();
 			} while (!(check.equalsIgnoreCase("y")));
-			// scan.close();
 		}
 		System.out.println(" ---------------------");
 		System.out.println("    - Game Over -     ");
@@ -100,5 +101,6 @@ public class Main {
 			System.out.println("|      You Lose!      |");
 		}
 		System.out.println(" ---------------------");
+		scan.close();
 	}
 }
