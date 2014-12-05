@@ -93,12 +93,23 @@ public class Inventory {
 					}
 					//System.out.println("IN:" + check);
 				}
+				//if(check == -1){
+					//break;
+				//}
 				if (check != -1)
 					scan.nextLine();
+				
 				//System.out
 						//.println("CONFIRMATION_CONTROL_STATION_ALPHA_PROTOCOL_6");
 
 			} while (check != -1);
+			
+		}
+		try {
+			scan = new Scanner(new File("data/events.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		//System.out.println("Output");
 		return output;
