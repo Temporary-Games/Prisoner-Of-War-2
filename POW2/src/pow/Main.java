@@ -7,8 +7,8 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		// rounds of the game
 		int rounds = 30;
-		
-		//Used and essential
+
+		// Used and essential
 		String check;
 
 		// The players inventory
@@ -23,7 +23,7 @@ public class Main {
 			// recieves user input
 			Scanner scan = new Scanner(System.in);
 			do {
-				
+
 				// Prints out the Round Box and the Number of Freed/Killed
 				// prisoners.
 				System.out.println(" ---------------------");
@@ -50,10 +50,10 @@ public class Main {
 				// Prints out the name of the event card.
 				System.out.println(stuff.getTitle());
 
-				// If the num for inventory position is not zero, the item will
+				/*// If the num for inventory position is not zero, the item will
 				// be placed into the players inventory.
 				if (stuff.getInventoryPosition() != 0)
-					playerInv.addItem(stuff.getInventoryPosition());
+					playerInv.addItem(stuff.getInventoryPosition());*/
 
 				// If the event card automatically frees a prisoner, Save one
 				// prisoner, and print it out.
@@ -62,10 +62,11 @@ public class Main {
 					System.out.println("A prisoner was freed.");
 				}
 
+				// Print the inventory (Unused)
+				//System.out.println("Inventory :: " + playerInv.toString());
+
 				// Kill or Save Prisoners
 				stuff.killSavePrisoners();
-
-				System.out.println("Inventory :: " + playerInv.toString());
 
 				// If there are no more prisoners left, end the game.
 				if (Event.prisoners <= 0
@@ -76,14 +77,14 @@ public class Main {
 				}
 
 				// Else, Do you want to go to the next turn?
-				else{
+				else {
 					System.out
 							.println("Do you want to go to the next turn?(y/n)");
 
 				}
 				check = scan.next();
 			} while (!(check.equalsIgnoreCase("y")));
-			//scan.close();
+			// scan.close();
 		}
 		System.out.println(" ---------------------");
 		System.out.println("    - Game Over -     ");
@@ -93,9 +94,9 @@ public class Main {
 		System.out.println("|  Dead Prisoners: " + Event.killedPrisoners
 				+ "  |");
 		System.out.println(" ---------------------");
-		if(Event.savedPrisoners>Event.killedPrisoners){
+		if (Event.savedPrisoners > Event.killedPrisoners) {
 			System.out.println("|      You Win!       |");
-		}else{
+		} else {
 			System.out.println("|      You Lose!      |");
 		}
 		System.out.println(" ---------------------");
