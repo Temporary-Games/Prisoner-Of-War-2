@@ -5,13 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Inventory {
-	
+
 	int a = 0;
 	int b = 0;
 	int c = 0;
 	int d = 0;
 	int e = 0;
-	
+
 	// declare scanner
 	Scanner scan;
 
@@ -29,24 +29,41 @@ public class Inventory {
 		d = a4;
 		e = a5;
 		// set all the inventory slots empty
-		
 
 		// read in the file of events
 		scan = new Scanner(new File("data/events.txt"));
 	}
-	
-	public String toString(int q){
-		switch(q){
-		case 0: return "-EMPTY-";
-		case 1: return "Chocolate Bar";
-		case 2: return "Cigar Box";
+
+	public void addItem(int item) {
+		if(a == 0){
+			a = item;
+		}
+		else if(b == 0){
+			b = item;
+		}
+		else if(c == 0){
+			c = item;
+		}
+		else if(d == 0){
+			d = item;
+		}
+		else if(e == 0){
+			e = item;
+		}
+	}
+
+	public String printInventory(int q) {
+		switch (q) {
+		case 0:
+			return "EMPTY";
+		case 1:
+			return "Chocolate Bar";
+		case 2:
+			return "Cigar Box";
 		}
 		return "ERROR";
 	}
 }
-
-
-
 
 /*package pow;
 

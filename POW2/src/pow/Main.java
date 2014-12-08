@@ -12,9 +12,8 @@ public class Main {
 		String check;
 
 		// The players inventory
-		@SuppressWarnings("unused")
 		Inventory playerInv = new Inventory(0, 0, 0, 0, 0);
-		
+
 		// recieves user input
 		Scanner scan = new Scanner(System.in);
 
@@ -52,10 +51,11 @@ public class Main {
 				// Prints out the name of the event card.
 				System.out.println(stuff.getTitle());
 
-				/*// If the num for inventory position is not zero, the item will
-				// be placed into the players inventory.
-				if (stuff.getInventoryPosition() != 0)
-					playerInv.addItem(stuff.getInventoryPosition());*/
+				// If the num for inventory position is not zero, the item
+				// will be placed into the players inventory.
+				if (stuff.getInventoryPosition() != 0) {
+					playerInv.addItem(stuff.getInventoryPosition());
+				}
 
 				// If the event card automatically frees a prisoner, Save one
 				// prisoner, and print it out.
@@ -65,8 +65,36 @@ public class Main {
 				}
 
 				// Print the inventory (Unused)
-				//System.out.println("Inventory :: " + playerInv.toString());
+				System.out.print("Inventory :: ");
+				for (int i = 0; i < 5; i++) {
+					if (i == 0)
+						System.out.print("-" + playerInv.printInventory(playerInv.a) + "- ");
+					if (i == 1)
+						System.out.print("-" + playerInv.printInventory(playerInv.b) + "- ");
+					if (i == 2)
+						System.out.print("-" + playerInv.printInventory(playerInv.c) + "- ");
+					if (i == 3)
+						System.out.print("-" + playerInv.printInventory(playerInv.d) + "- ");
+					if (i == 4)
+						System.out.print("-" + playerInv.printInventory(playerInv.e) + "- ");
+				}
+				System.out.println("");
 
+				//Use item
+				System.out.println("Do you want to use an item? Enter an item number.");
+				int i = scan.nextInt();
+				
+				if (i == 0)
+					playerInv.a = 0;
+				if (i == 1)
+					playerInv.b = 0;
+				if (i == 2)
+					playerInv.c = 0;
+				if (i == 3)
+					playerInv.d = 0;
+				if (i == 4)
+					playerInv.e = 0;
+				
 				// Kill or Save Prisoners
 				stuff.killSavePrisoners();
 
