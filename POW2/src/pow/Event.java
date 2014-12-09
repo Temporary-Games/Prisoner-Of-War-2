@@ -38,7 +38,7 @@ public class Event {
 		// event reads in an event from "events.txt"
 		Scanner event = new Scanner(new File("data/events.txt"));
 		// Test call of the event.txt file
-		int x = (int) (Math.random() * 7);
+		int x = (int) (Math.random() * 9);
 		for (int i = 0; i < x; i++) {
 			event.nextLine();
 		}
@@ -86,7 +86,7 @@ public class Event {
 
 		// Save Prisoners
 		else if (guardAggression <= -10) {
-			for (int y = guardAggression; y < -10; y += 10) {
+			for (int y = guardAggression; y <= -10; y += 10) {
 				savedPrisoners++;
 				save++;
 			}

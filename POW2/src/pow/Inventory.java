@@ -35,19 +35,15 @@ public class Inventory {
 	}
 
 	public void addItem(int item) {
-		if(a == 0){
+		if (a == 0) {
 			a = item;
-		}
-		else if(b == 0){
+		} else if (b == 0) {
 			b = item;
-		}
-		else if(c == 0){
+		} else if (c == 0) {
 			c = item;
-		}
-		else if(d == 0){
+		} else if (d == 0) {
 			d = item;
-		}
-		else if(e == 0){
+		} else if (e == 0) {
 			e = item;
 		}
 	}
